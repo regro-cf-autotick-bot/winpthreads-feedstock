@@ -27,7 +27,7 @@ source:
     folder: src-winpthread
 
 build:
-  number: 0
+  number: 1
   skip: True  # [not win]
 
 outputs:  
@@ -57,6 +57,7 @@ outputs:
     requirements:
       build:
         - {{ compiler('c') }}
+        - {{ stdlib('c') }}
       host:
         - {{ pin_subpackage("libwinpthread", exact=True) }}
       run:
